@@ -26,8 +26,7 @@ export default function Contact({ onEasterEgg }: ContactProps) {
   const handleCommand = (command: string) => {
     // Check for easter egg
     if (command.toLowerCase() === "sudo access" || command.toLowerCase() === "sudo hack") {
-      setTerminalLines((prev) => [
-        ...prev,
+      setTerminalLines([
         { text: `> ${command}`, delay: 0 },
         { text: "UNAUTHORIZED ACCESS ATTEMPT DETECTED", delay: 300 },
         { text: "BYPASSING SECURITY PROTOCOLS...", delay: 600 },
@@ -48,8 +47,7 @@ export default function Contact({ onEasterEgg }: ContactProps) {
     if (step === "name") {
       setFormData((prev) => ({ ...prev, name: command }))
 
-      setTerminalLines((prev) => [
-        ...prev,
+      setTerminalLines([
         { text: `> ${command}`, delay: 0 },
         { text: `Name registered: ${command}`, delay: 300 },
         { text: "Please enter your contact email:", delay: 600 },
@@ -58,8 +56,7 @@ export default function Contact({ onEasterEgg }: ContactProps) {
     } else if (step === "email") {
       setFormData((prev) => ({ ...prev, email: command }))
 
-      setTerminalLines((prev) => [
-        ...prev,
+      setTerminalLines([
         { text: `> ${command}`, delay: 0 },
         { text: `Email registered: ${command}`, delay: 300 },
         { text: "Please enter your message:", delay: 600 },
@@ -68,8 +65,7 @@ export default function Contact({ onEasterEgg }: ContactProps) {
     } else if (step === "message") {
       setFormData((prev) => ({ ...prev, message: command }))
 
-      setTerminalLines((prev) => [
-        ...prev,
+      setTerminalLines([
         { text: `> ${command}`, delay: 0 },
         { text: "Encrypting message...", delay: 300 },
         { text: "Establishing secure connection...", delay: 600 },
@@ -120,6 +116,7 @@ export default function Contact({ onEasterEgg }: ContactProps) {
             <button
               onClick={() => {
                 setStep("name")
+                setFormData({ name: "", email: "", message: "" }) // Reset form data
                 setTerminalLines([
                   { text: "Initializing new communication channel...", delay: 0 },
                   { text: "Connection established.", delay: 500 },
