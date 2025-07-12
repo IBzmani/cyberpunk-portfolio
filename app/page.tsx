@@ -104,12 +104,12 @@ export default function Home() {
               FULL-STACK DEVELOPER // DIGITAL ARCHITECT
             </h2>
             <div className="flex flex-wrap justify-center gap-6">
-              {/* <button
+              <button
                 onClick={() => handleNavigation("projects")}
                 className="cyber-button text-cyber-green border border-cyber-green hover:bg-cyber-green/10 px-6 py-3 font-share-tech-mono transition-all duration-300 glow-green"
               >
                 VIEW PROJECTS
-              </button> */}
+              </button>
               <button
                 onClick={() => handleNavigation("contact")}
                 className="cyber-button text-neon-magenta border border-neon-magenta hover:bg-neon-magenta/10 px-6 py-3 font-share-tech-mono transition-all duration-300 glow-magenta"
