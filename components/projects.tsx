@@ -66,17 +66,16 @@ export default function Projects() {
   const handleProjectClick = (project: Project) => {
     applyGlitchEffect()
     setIsDecrypting(true)
-
     setTimeout(() => {
-      setSelectedProject(project)
-      setIsDecrypting(false)
+    setSelectedProject(project)
+    setIsDecrypting(false)
     }, 2000)
   }
 
   const handleBack = () => {
     applyGlitchEffect()
     setTimeout(() => {
-      setSelectedProject(null)
+    setSelectedProject(null)
     }, 500)
   }
 
@@ -208,8 +207,6 @@ export default function Projects() {
               }}
               whileHover={{
                 scale: 1.02,
-                rotateY: 5,
-                rotateX: -5,
                 boxShadow: "0 0 20px rgba(0, 255, 255, 0.3)",
               }}
             >
